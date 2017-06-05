@@ -1,0 +1,20 @@
+{
+  "name": "mongo-mock-two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "setup.js",
+  "scripts": {
+    "start": "node setup.js",
+    "contractTests": "./node_modules/.bin/mocha test/contractTest --recursive",
+    "unitTest": "./node_modules/.bin/mocha test/unitTest --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.1",
+    "mongodb": "^2.2.28",
+    "should": "^11.2.1",
+    "sinon": "^2.3.2",
+    "supertest": "^3.0.0"
+  }
+}
