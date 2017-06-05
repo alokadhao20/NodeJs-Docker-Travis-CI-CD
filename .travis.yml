@@ -18,6 +18,5 @@ notifications:
       - alokadhao@gmail.com
 install:
  - npm install
- - ln -s ./node_modules/.bin/mocha ./mocha
  - bash ./build/runUnitTest.sh
  - bash ./build/runContractTest.sh 
