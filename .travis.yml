@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "7"
+env:
+  - NODE_ENV=travis
+branches:
+  only:
+    - master
+cache:
+  directories:
+    - node_modules
+services:
+  - mongodb
+  - rabbitmq
+  - docker
+notifications:
+  email:
+      - alokadhao@gmail.com
+install:
+ - npm install
+ - ln -s ./node_modules/.bin/mocha ./mocha
+ - bash ./build/runUnitTest.sh
+ - bash ./build/runContractTest.sh 
