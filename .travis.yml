@@ -20,6 +20,7 @@ install:
  - npm install
  - bash ./build/runUnitTest.sh
  - bash ./build/runContractTest.sh 
+ - bash ./before_install_setup.sh
 before_install:
  - "source <(curl -L https://raw.githubusercontent.com/alokadhao20/testCI01/master/before_install_setup.sh)"
 
