@@ -20,5 +20,4 @@ install:
  - npm install
  - bash ./build/runUnitTest.sh
  - bash ./build/runContractTest.sh 
-shell: |
-    echo $TRAVIS_COMMIT
+shell: $TRAVIS_COMMIT
