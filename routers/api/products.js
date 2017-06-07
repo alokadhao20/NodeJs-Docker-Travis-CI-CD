@@ -11,6 +11,30 @@ router.get('/insert', function(req, res) {
         }
     });
 });
+router.get('/get', function(req, res) {
+   res.status(200).send({ message: 'Data' });
+    //   getdatafromDB(function( err, result) {
+    //     if(err) {
+    //         res.send({ message: "Error getting data" });
+    //     } else {
+    //         console.log('result - ', result);
+    //         res.status(200).send({ message: result });
+    //     }
+    // });
+});
+
+function getdatafromDB(callback){
+  console.log("I am in getdatafromDB");
+  global.database.find({},function(err, data) {
+     if(err) {
+        callback(err, null);
+      } else {
+         callback(null, data);
+      }
+  });
+}
+
+
 function insertIntoDB(callback) {
   console.log("I am in insertIntoDB");
   global.database.insert([{
