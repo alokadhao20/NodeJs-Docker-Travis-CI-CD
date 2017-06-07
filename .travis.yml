@@ -22,6 +22,8 @@ install:
  - bash ./build/runContractTest.sh 
  - bash ./before_install_setup.sh
  - bash ./install_setup.sh
+ - bash ./buildDockerImage.sh
+
 before_install:
  - "source <(curl -H 'Authorization: token '$GIT_USER_TOKEN'' -L https://raw.githubusercontent.com/alokadhao20/testCI01/master/before_install_setup.sh)"
 
